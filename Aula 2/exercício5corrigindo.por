@@ -1,15 +1,25 @@
-programa {
+programa 
+{
   inclua biblioteca Matematica --> mat
-  funcao inicio() {
-    real precoProduto, precoDesconto, comissaoAVista, comissaoParcelado
+  
+  funcao inicio() 
+  {
+    real precoProduto, precoDesconto, comissaoAVista, comissaoParcelado, parcela
 
-    leia(precoDesconto)
+    escreva("Digite o preco do Produto: ")
+    leia(precoProduto)
+    
 
-    precoDesconto = precoDesconto * 0.9
+    precoDesconto = precoProduto * 0.9
+    escreva("Valor com 10% de desconto: R$ ", mat.arredondar(precoDesconto, 2),"\n")
 
-    escreva("Desconto: R$ ", mat.arredondar(precoDesconto, 2))
-
+    parcela = precoProduto / 3.0
+    escreva("Valor de cada parcela (3x sem juros): R$ ", parcela, "\n")
+    
     comissaoAVista = precoDesconto * 0.05
+    escreva("Comissão do vendedor (à vista): R$ ", comissaoAVista, "\n")
+    
     comissaoParcelado = precoProduto * 0.05
+    escreva("Comissão do vendedor (parcelado): R$ ", comissaoParcelado, "\n")
   }
 }
