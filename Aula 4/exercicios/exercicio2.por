@@ -1,6 +1,3 @@
-//Crie um programa em Portugol que leia um número inteiro N e calcule a soma de todos os números pares de 1 até N. 
-//O programa deve utilizar um laço de repetição para percorrer os números de 1 até N, somando apenas os números pares.
-
 programa 
 {
   funcao inicio() 
