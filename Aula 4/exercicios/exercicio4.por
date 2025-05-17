@@ -1,19 +1,27 @@
-
-//AINDA TERMINANDO O CÓDIGO
-programa 
+programa
 {
-  funcao inicio() 
-  {
-    inteiro senha = 4321
+	
+	funcao inicio()
+	{
+		inteiro senha = 1234
 
-    escreva("Digite sua senha: ")
-    leia(senha)
+		faca 
+		{
+			escreva("Digite sua senha: ")
+			leia(senha)
 
-    faca
-    {
-      escreva(senha, "\n")
-      senha++
-    }
-    enquanto (senha )
-  }
+			se (senha == 1234)
+			{
+				escreva("Acesso liberado!")
+				pare
+			}
+			senao
+			{
+				escreva("Senha incorreta. Tente novamente.\n")
+			}
+		}
+		enquanto (senha != 1234)
+			
+		
+	}
 }
