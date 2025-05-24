@@ -5,7 +5,7 @@ programa
 	
 	funcao inicio()
 	{
-		 inteiro opcao
+		inteiro opcao
         
         faca
         {
@@ -49,16 +49,16 @@ programa
 	{
 		inteiro selecionarOpcao
 		
-		    escreva("===== SISTEMA BANCÁRIO =====\n")
-      	escreva("0 - Sair\n")
-      	escreva("1 - Criar Conta\n")
-      	escreva("2 - Exibir Contas\n")
-      	escreva("3 - Depositar\n")
-      	escreva("4 - Sacar\n")
-      	escreva("5 - Buscar Conta\n")
-       	escreva("=============================\n")
-      	escreva("Escolha uma opção: ")
-      	leia(selecionarOpcao)
+	    escreva("===== SISTEMA BANCÁRIO =====\n")
+      	    escreva("0 - Sair\n")
+      	    escreva("1 - Criar Conta\n")
+      	    escreva("2 - Exibir Contas\n")
+      	    escreva("3 - Depositar\n")
+      	    escreva("4 - Sacar\n")
+      	    escreva("5 - Buscar Conta\n")
+       	    escreva("=============================\n")
+      	    escreva("Escolha uma opção: ")
+      	    leia(selecionarOpcao)
 
       	retorne selecionarOpcao
 	}
