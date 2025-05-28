@@ -5,7 +5,7 @@ programa
 	{
 		inteiro N, par, impar, positivo, negativo, sequencia
 
-		escreva("Digite um npumero: ")
+		escreva("Digite um numero: ")
 		leia(N)
 
 		sequencia = sequenciaNumero(par, impar, positivo, negativo)
