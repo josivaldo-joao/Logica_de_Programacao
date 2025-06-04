@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
 
 
 int mostrarMenu ()
@@ -26,22 +28,22 @@ void criarConta()
 
 void exibirConta()
 {
-    printf("Opção Exibir Contas selecionada.\n");
+    printf("Opcao Exibir Contas selecionada.\n");
 }
 
 void depositar()
 {
-    printf("Opção Depositar selecionada.\n");
+    printf("Opcao Depositar selecionada.\n");
 }
 
 void sacar()
 {
-    printf("Opção Sacar selecionada.\n");
+    printf("Opcao Sacar selecionada.\n");
 }
 
 void buscarConta()
 {
-    printf("Opção Buscar Conta selecionada.\n");
+    printf("Opcao Buscar Conta selecionada.\n");
 }
 
 int main()
@@ -76,7 +78,8 @@ int main()
             printf("Opção inválida. Tente novamente.\n");
             break;
         }
-
+        Sleep(2000);
+        system("cls");
     } 
     while (opcao != 0);
     
