@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int mostrarMenu (int selecioandoOpcao)
+int mostrarMenu ()
 {
     int selecionarOpcao;
 
@@ -50,7 +50,7 @@ int main()
 
     do
     {
-        opcao = mostrarMenu;
+        opcao = mostrarMenu(0);
 
         switch (opcao)
         {
