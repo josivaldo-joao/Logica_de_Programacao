@@ -1,7 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include <string.h>
 
+#define MAX_CONTAS 100
+
+typedef struct
+{
+    int numero;
+    char nome[100];
+    float saldo;
+}conta;
+
+conta contas[MAX_CONTAS];
+int totalContas = 0;
+
+void criarConta(char nome[])
+{
+    if (totalContas < MAX_CONTAS)
+    {
+        contas[totalContas].numero = totalContas + 1;
+        strcpy(contas[totalContas].nome, nome);
+        contas[totalContas].saldo = 0.0; 
+        printf("Conta criada com sucesso! Numero: %d, Nome: %s, Saldo: RS%2.f\n", contas[totalContas].numero, contas[totalContas].nome, contas[totalContas].saldo);
+        totalContas++;
+    }
+    else
+    {
+        printf("Limite de contas atingido!\n"); 
+    }
+}
+void exibirContas()
+{
+    for (int  i = 0; i < totalContas; i++)
+    {
+        printf("Numero: %d, Nome: %s, Saldo: R$.2f\n", contas[i].numero, contas[i].nome, contas[i]. saldo);
+    }
+    
+}
 
 int mostrarMenu ()
 {
@@ -60,7 +96,7 @@ int main()
             printf("Saindo do sitema...\n");
             break;
         case 1: 
-            criarConta();
+            criarConta(0);
             break;
         case 2: 
             exibirConta();
