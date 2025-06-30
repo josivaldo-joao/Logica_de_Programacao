@@ -90,6 +90,8 @@ void salvarDados(Paciente pacientes[], int totalPacientes)
                 pacientes[i].planoPaciente.valorMensal, pacientes[i].planoPaciente.ativo);
     }
 
+    printf("Dados salvos com sucesso.\n");
+    
     fclose(arquivo);
 }
 
@@ -133,7 +135,7 @@ void cadastrarPaciente(Paciente pacientes[], int *totalPacientes, int *ids)
     char idadeS[10];
 
     printf("--- CADASTRO ---\n");
-    printf("digite o seu nome: ");
+    printf("Digite o seu nome: ");
     fgets(pacientes[i].nome, sizeof(pacientes[i].nome), stdin);
     printf("Digite sua idade: ");
     fgets(idadeS, sizeof(idadeS), stdin);
@@ -171,7 +173,6 @@ void exibirPaciente(Paciente pacientes[], int totalPacientes)
     {
         printf("Nenhuma conta cadastrada!\n");
     }
-    
 
     for (int i = 0; i < totalPacientes; i++)
     {
@@ -468,8 +469,9 @@ int mostrarMenu()
     printf("5 - Excluir paciente\n");
     printf("6 - Listar por idade\n");
     printf("7 - Listar por diagnóstico\n");
-    printf("8 - Criar plano para o paciente\n");
-    printf("9 - Cancelar plano do paciente\n");
+    printf("8 - Salvar dados do paciente\n");
+    printf("9 - Criar plano para o paciente\n");
+    printf("10 - Cancelar plano do paciente\n");
     scanf("%d", &selecionarOpcao);
 
     return selecionarOpcao;
@@ -477,7 +479,7 @@ int mostrarMenu()
 
 int main()
 {
-    setlocale(LC_ALL, "portuguese");
+    setlocale(LC_ALL, "Portuguese_Brazil");
 
     int opcao;
     Paciente pacientes[MAX_PACIENTES];
@@ -496,7 +498,6 @@ int main()
         switch (opcao) 
         {
         case 0:
-            salvarDados(pacientes, totalPacientes);
             printf("Saindo do sistema.\n");
             carregando();
             break;
@@ -538,10 +539,15 @@ int main()
         }
         case 8:
         {
-            criarPlano(pacientes, totalPacientes);
+            salvarDados(pacientes, totalPacientes);
             break;
         }
         case 9:
+        {
+            criarPlano(pacientes, totalPacientes);
+            break;
+        }
+        case 10:
         {
             cancelarPlano(pacientes, totalPacientes);
             break;
