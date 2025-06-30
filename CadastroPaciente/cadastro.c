@@ -83,7 +83,7 @@ void salvarDados(Paciente pacientes[], int totalPacientes)
 
    for (int i = 0; i < totalPacientes; i++)
     {
-        // Modificando para salvar os dados do plano também
+        // Salvando dados 
         fprintf(arquivo, "%d, %s, %d, %s, %d, %s, %.2f, %d\n",
                 pacientes[i].codigo, pacientes[i].nome, pacientes[i].idade, pacientes[i].diagnostico,
                 pacientes[i].planoPaciente.codigoPlano, pacientes[i].planoPaciente.nomePlano,
